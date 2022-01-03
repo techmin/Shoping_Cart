@@ -1,6 +1,8 @@
 import CartItem from "../CartItem/CartItem";
 //styled
 import { Wrapper } from "./Cstyle";
+import { Button } from "@material-ui/core";
+import {Link} from "react-router-dom";
 //types
 import { CartItemType } from "../App";
 import { ReactText } from "react";
@@ -32,6 +34,18 @@ const Cart:React.FC<props>=({cartitems,addToCart,removeFromCart})=>
             <h2>
                 Total: ${calculateTotal(cartitems).toFixed(2)}
             </h2>
+           <div className="buttons"> 
+                <Button>
+                    <ul>
+                        <li>
+                            <Link to={"../CartScreen/cartScreen"}
+                            >
+                                To bag 
+                            </Link>
+                        </li>
+                    </ul>
+                </Button>
+           </div>
         </Wrapper>
 
     )

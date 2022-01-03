@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Badge from '@material-ui/core/Badge';
 import Cart from './cart/cart'
+import cartScreen from './CartScreen/cartScreen'
 //styles
 import { Wrapper,StyledButton } from './styles';
 //types
@@ -21,6 +22,7 @@ export  type CartItemType ={
   title: string;
   amount: number;
 }
+ 
 const getProducts =async (): Promise<CartItemType[]> =>
   await(await fetch('https://fakestoreapi.com/products')).json(); //convertingt the product to json 
 
